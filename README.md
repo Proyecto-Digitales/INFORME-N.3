@@ -1,4 +1,4 @@
-                                    ENTRADA Y SALIDA DE DATOS PARA UNA RASPBERRY PI
+                                       ENTRADA Y SALIDA DE DATOS PARA UNA RASPBERRY PI
 
 
 1.PLANTEAMIENTO DEL PROBLEMA
