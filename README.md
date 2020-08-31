@@ -48,7 +48,11 @@ Banerjee, Sethia, Mittal, Arora y Chauhan (2013) hablan de un sensor de movimien
 
 •Diagramas eléctricos.
 
-https://github.com/Proyecto-Digitales/INFORME-N.3/blob/master/Img/4_A.PNG
+![alt text](https://github.com/Proyecto-Digitales/INFORME-N.3/blob/master/Img/4_A.PNG)
+
+•Diagramas esquematico.
+
+![alt text](https://github.com/Proyecto-Digitales/INFORME-N.3/blob/master/Img/Diagrama.jpeg)
 
 
 6.LISTA DE COMPONENTES
