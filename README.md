@@ -1,22 +1,25 @@
-                                    ENTRADA Y SALIDA DE DATOS EN BRAINBOX PARA UNA RASPBERRY PI
+                                    ENTRADA Y SALIDA DE DATOS PARA UNA RASPBERRY PI
 
 
 1.PLANTEAMIENTO DEL PROBLEMA
 
-Mediante el uso del simulador Brainbox simular una Raspberry Pi que permita la visualización de entrada de datos a través de leds que prendan y apaguen con las entradas GPIO pines de la Raspberry
+La Raspberry Pi es un ordenador de bajo coste y tamaño reducido, hoy en día es muy popular su venta para diversos proyectos ya que es fácil conectarle un televisor y un teclado para interactuar con ella exactamente igual que cualquier otra computadora. Pero una de las grandes dificultades cuando se es principiante en su uso, es como interactuar tanto en entrada como en salida de datos, y aquí surge una pregunta, ¿Cómo reconocer cada puerto o pin de entrada y salida de datos?, además de su respectiva función y ¿cómo poder utilizarlas? 
 
 
 2.OBJETIVOS
 
 Objetivo general
 
--Implementar a traves de la Raspberry Pi un diseño que visualice la entrada de datos con salida de leds
+Implementar un ejemplo que explique cómo funciona el proceso de entrada y salida de datos en una raspberry pi.
 
-Objetivo específicos
+Objetivos específicos
 
--Investigar en funcionamiento de l simulador brainbox como de us componentes y uso
+-Investigar el hardware de la raspberry pi.
 
--Comprobar el funcionamiento del diseño de entrada de datos  a travesdel laboratorio virtual Brainbox.
+-Comprobar el funcionamiento del ejemplo mediante el simulador en línea BrainBox.
+
+-Implementar como aporte un circuito en físico que explique salida y entrada de datos en una raspberry.
+
 
 
 3.ESTADO DEL ARTE
@@ -58,7 +61,12 @@ Banerjee, Sethia, Mittal, Arora y Chauhan (2013) hablan de un sensor de movimien
 
 6.LISTA DE COMPONENTES
 
--Laboratorio virtual Brainbox
+-Simulador BrainBox
+-Proto
+-Resistencias
+-Cables
+-Pulsadores
+-Raspbery pi modelo B
 
 
 7.MAPA DE VARIABLES
@@ -68,53 +76,61 @@ Este punto hace referencia a las variables que se emplean dentro de un programa,
 
 8.EXPLICACIÓN DEL DISEÑO
 
-Contador en código binario.
+Uno de los accesorios estrella de la Raspberry Pi es su cámara. Con ella se pueden realizar numerosos proyectos, en este informe se presenta el ejemplo de cómo utilizar este módulo de cámara y que acciones nos permite realizar la raspbery pi .
+Para este diseño solo presentaremos la simulación, pero es conveniente que si se requiere realizar el proyecto en físico se necesita un módulo de cámara para la raspberry, la cual debe ser una cámara IP para poder monitorear remotamente mediante la raspberry.
 
-En esta etapa es necesario indicar que se utilizará un generador de señal de reloj (CLK) para los FLIP FLOP (FF), de igual forma usaremos una frecuencia aproximada de 1 Hz dados los valores de las resistencias R1 y R2 (330 Ohmios ).
-Tomaremos en cuenta que:
-- Un contador asíncrono tiene como principal característica que cada flip flop que lo compone tiene diferente señal de reloj (clk).
-- El temporizador está configurado a una frecuencia de 1 Hz, es decir que el contador aumentará de valor cada segundo.
-- Los integrados usados para los contadores con flip flops D serán el CD4013 y el 74hHC74. En nuestro caso usaremos el integrado 74HC74.
 
-Para empezar nuestro análisis tendremos que plantear los estados, en este caso de 4 bits será de 0000 a 1111 es decir un conteo de de 0 a 15.
+![alt text](https://github.com/Proyecto-Digitales/INFORME-N.3/blob/master/Img/Dise%C3%B1o1.png)
 
-En esta parte vemos como se pasa de un estado al otro nuestra cuenta, lo que nos indica que las salidas de nuestros fip flops tendran una salida de 0 o 1. 
 
-![alt text](https://github.com/Proyecto-Digitales/INFORME-N.2/blob/master/Img/Tablas%20de%20transicion.PNG)
+En la imagen se observa un modelo de raspberry en donde encerrado en recuadro rojo observamos la entrada del módulo del cámara conocido como puerto J3.                     
 
-                     Tabla de verdad de cambio de estados 
 
-Tabla de excitación del flip flop D
+![alt text](https://github.com/Proyecto-Digitales/INFORME-N.3/blob/master/Img/Dise%C3%B1o2.png)
 
-Ya que estamos usando un flip flop tipo D, tenemos la siguiente tabla, la cual nos muestra la respuesta a los cambios de estado que sufre el flip flop.
+         
+ Aquí podemos ver ya un módulo de cámara conectado al puerto J3.
+Una vez explicado la ubicación donde se conectaría la cámara nos centraremos en la simulación. 
+Para ello utilizamos el simulador BrainBox el cual nos presenta ya un modelo programado de cámara para la raspberry, al modelo de la cámara podemos 
+añadirle una dirección IP de cualquier cámara que tengamos acceso y siempre y cuando sea en formato mjpeg. Nosotros utilizaremos la web insecam.com para 
+obtener una IP de una cámara pública, la cual representará nuestra entrada de datos.
 
-![alt text](https://github.com/Proyecto-Digitales/INFORME-N.2/blob/master/Img/Tabla%20de%20exitacion.PNG)
-
-          Tabla de exitacion de un flip flop tipo D
+         
+ ![alt text](https://github.com/Proyecto-Digitales/INFORME-N.3/blob/master/Img/Dise%C3%B1o3.png)
  
- Analizando el cambio de estado de cada columna tenemos el siguiente diagrama:
  
- ![alt text](https://github.com/Proyecto-Digitales/INFORME-N.2/blob/master/Img/Cambio%20de%20estados.png)
+ ![alt text](https://github.com/Proyecto-Digitales/INFORME-N.3/blob/master/Img/Dise%C3%B1o4.png)
  
-Una vez analisado los cambios de estado procedemos a implementar el circuito en el simulador proteus, para implementar nuestro circuito debemos tomar en cuenta lo siguiente:
+ Este es el modelo programado de la cámara para nuestra raspberry.
+ 
+  ![alt text](https://github.com/Proyecto-Digitales/INFORME-N.3/blob/master/Img/Dise%C3%B1o5.png)
+  
+  En donde insertamos la dirección IP de nuestra cámara pública.
+  
+  ![alt text](https://github.com/Proyecto-Digitales/INFORME-N.3/blob/master/Img/Dise%C3%B1o6.png)
+  
+  En esta parte podemos ver diferentes bloques ya programados que representan el poder que tiene la raspberry para el proceso de imágenes. Explicaremos cada una de ellas:
+  
+   ![alt text](https://github.com/Proyecto-Digitales/INFORME-N.3/blob/master/Img/Dise%C3%B1o7.png)
+   
+   Al inicio cuando entran los datos de las imágenes proporcionadas por nuestra cámara IP, es necesario escalar a una resolución adecuada, dicha resolución dependerá del dispositivo en el que queramos reproducir las imágenes y la calidad de las imágenes que nos da la cámara de la raspberry. También podemos realizar un Histograma de imagen que, en un contexto de procesamiento de imágenes, el histograma de una imagen normalmente se refiere a un histograma de los valores de intensidad de píxeles. Este histograma es un gráfico que muestra el número de píxeles de una imagen en cada valor de intensidad diferente que se encuentra en esa imagen. Para una imagen en escala de grises de 8 bits, hay 256 intensidades posibles diferentes, por lo que el histograma mostrará gráficamente 
+   256 números que muestran la distribución de píxeles entre esos valores de escala de grises.
+   
+   
+  ![alt text](https://github.com/Proyecto-Digitales/INFORME-N.3/blob/master/Img/Dise%C3%B1o8.png)
+  
+  
+  Convertidor de escala de grises promedio: El método promedio es el método más simple de color a escala de grises. Solo debes tomar la media de tres colores. Dado que es una imagen RGB, significa que debe agregar r con g con b y luego dividirlo por 3 para obtener la imagen en escala de grises deseada.
+Inversión de color: La inversión de color, también conocida como efecto negativo, es uno de los efectos más fáciles de lograr en el procesamiento de imágenes. La inversión de color se logra restando cada valor de color RGB del valor máximo posible (generalmente 255). La inversión puede ser necesaria para realizar algunas operaciones, como operaciones morfológicas. Por ejemplo, la erosión reduce los límites de las regiones de blanco / primer plano, por lo que importa qué píxeles son blancos / primer plano.
 
--Necesitaremos 4 flip flops, uno por cada bit requerido en este caso seran 4 flip flops, seguido conectaremos la señal de reloj a nuestro primer flip flop, la salida de este significa el bit menos significativo de nuestro conteo.
+  ![alt text](https://github.com/Proyecto-Digitales/INFORME-N.3/blob/master/Img/Dise%C3%B1o9.png)
+  
+  
+  Voltear filtro vertical: Un giro (efecto espejo) se realiza invirtiendo los píxeles horizontal o verticalmente.
+Filtro de desenfoque gaussiano: Ejecuta un desenfoque Guassian con el parámetro de nivel que especifica la extensión del desenfoque. Es un efecto ampliamente utilizado en software de gráficos, generalmente para reducir el ruido de la imagen y reducir los detalles.
 
--Cada entrada de reset y clear deberá estar conectada a Vcc, ya que se activan en bajo y nos las utilizaremos.
+  ![alt text](https://github.com/Proyecto-Digitales/INFORME-N.3/blob/master/Img/Dise%C3%B1o10.png)
 
--Conectamos cada terminal D a Q’ y también a los clock’s. Con esto haremos que la salida anterior se duplique hacia la entrada del siguiente flip flop.
-
-Implementación en proteus:
-
-![alt text](https://github.com/Proyecto-Digitales/INFORME-N.2/blob/master/Img/dise%C3%B1o%201.PNG)
-
-                            Simulación en proteus
-                  
-Ahora veremos la implementación en tinkercad                 
-                  
-![alt text](https://github.com/Proyecto-Digitales/INFORME-N.2/blob/master/Img/dise%C3%B1o%202.png)
-
-                                                                  Simulación en Tinkercad
                 
                  
 9.- DESCRIPCIÓN DE PRERREQUISITOS Y CONFIGURACIÓN
