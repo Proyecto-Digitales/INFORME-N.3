@@ -3,16 +3,14 @@
 
 1.PLANTEAMIENTO DEL PROBLEMA
 
-Una de las aplicaciones de los flip flops son los contadores asincrónicos los cuales pueden ser implementados mediante el uso de flip flops tipo D, para ello deben estar conectados en cascada, así obtendremos
-en cada salida de los flip flops un bit del conteo, esta implementación planea como reto principal la visualización de una secuencia no consecutiva de números decimales en dos Displays, para ello se deberá 
-diseñar un circuito el cual nos permita observar en dos displays de 7 segmentos el conteo de 0 a 15,. Al añadir dicho circuito ¿Afectara el funcionamiento de nuestro contador?
+Mediante el uso del simulador Brainbox simular una Raspberry Pi que permita la visualización de entrada de datos a través de leds que prendan y apaguen con las entradas GPIO pines de la Raspberry
 
 
 2.OBJETIVOS
 
 Objetivo general
 
--Implementar  un programa que permita visualizar las entradas y salidas de los datos 
+-Implementar a traves de la Raspberry Pi un diseño que visualice la entrada de datos con salida de leds
 
 Objetivo específicos
 
