@@ -130,84 +130,97 @@ Inversión de color: La inversión de color, también conocida como efecto negat
 Filtro de desenfoque gaussiano: Ejecuta un desenfoque Guassian con el parámetro de nivel que especifica la extensión del desenfoque. Es un efecto ampliamente utilizado en software de gráficos, generalmente para reducir el ruido de la imagen y reducir los detalles.
 
   ![alt text](https://github.com/Proyecto-Digitales/INFORME-N.3/blob/master/Img/Dise%C3%B1o10.png)
+  
 
-                
+ Flip horizontal: Un giro (efecto espejo) se realiza invirtiendo los píxeles horizontal o verticalmente.
+Filtro de relieve: La función EMBOSS aplica un operador de convolución a una matriz de imágenes 2D para generar una matriz que contiene valores de diferencia que representan bordes en la imagen original. Este proceso imparte una apariencia en relieve a la imagen. 
+Detector de objetos: Modelo de detección de objetos que tiene como objetivo localizar e identificar un objeto en una sola imagen.
+               
+               
                  
 9.- DESCRIPCIÓN DE PRERREQUISITOS Y CONFIGURACIÓN
 
-EL diseño de nuestro contador asincróno de 4 bits se lo realizó mediante el uso de flip flops tipo D. Es por ello que se tomó en cuenta la revisión de nuestro circuito integrado, en este caso es el modelo 74HC74, el cual presentamos un fragmento a continuación:
+Para poder ingresar al simulador y revisar la simulación de la cámara de la raspberry ingresamos al siguiente link:
 
-![alt text](https://github.com/Proyecto-Digitales/INFORME-N.2/blob/master/Img/Data1.PNG)
+http://www.brainbox-demo.de/circuit/?shared=5eQD@Ogef.brain se nos abrirá directamente la simulación.
 
+En el caso que nos pidiera usuario y contraseña ingresamos estos datos:
 
-Es necesario que el usuario revise el datasheet de todos los circuitos integrados utilizados para que tenga una idea de que voltajes o corrientes soportan cada integrado, ademas de poder reconocer cada pin y cual es su función.
-En el datasheet podemos obervar todas las especificaciones que se tomó en cuenta en el diseño, todo esto con el objetivo de no mostrar errores en la simulación del circuito, y tomando en cuenta a una posible implementación con integrados reales en un futuro,
+Usuario: Digitales
 
-Si el ususario desea comprobar el diseño del circuito lo puede hacer abriendo el archivo de la simulación en proteus o entrando a la plataforma Tinkercad en la cual se encuentra guardado el diseño implementado, tomando en cuenta que no prodrá modificar ninguna parte del circuito ya que ello conllevaria a fallas del circuito.
+Clave: h5xCbP9V4
 
-Nota: Es necesario tener instalado la versión 8.9 de proteus ya que si se desea abrir la simulación en versiones antiguas puede ocurrir errores o no abrir el archivo.
+Y nos dirigimos al apartado de proyectos guardados:
+
+![alt text](https://github.com/Proyecto-Digitales/INFORME-N.3/blob/master/Img/Manual1.png)
+
+Y elegimos el archivo de nombre raspberry.
+
+![alt text](https://github.com/Proyecto-Digitales/INFORME-N.3/blob/master/Img/Manual2.png)
+
 
 10.APORTACIONES
 
-Conversión de código binario de cuatro (4) bits a BCD.
-Al tener cuatro bits es posible manejar quince (15) combinaciones de entrada e igual número de combinaciones de salida. La tabla de valores para las posibles combinaciones es la siguiente:
+En este apartado realizaremos un ejemplo un poco más interactivo en el que revisaremos las dos filas de pines que lleva consigo la raspberry y las usaremos para poder controlar el encendido y apagado de leds.
+Para ello utilizamos una raspberry modelo B.
 
 
-![alt text](https://github.com/Proyecto-Digitales/INFORME-N.2/blob/master/Img/Binario%20a%20BCD.PNG)
+![alt text](https://github.com/Proyecto-Digitales/INFORME-N.3/blob/master/Img/Ap1.png)
 
-Mediante estas tablas es posible observar que los valores de las salidas son iguales hasta el número nueve (9) decimal y de ahí en adelante el código de salida aparece incrementado en seis (6) decimal respecto al código de entrada. Dado lo anterior es posible concebir un sumador que reciba como entradas A los valores del código binario y como entradas B el número seis (6) en binario (0 1 1 0) pero solo cuando la salida B4 tenga un valor de uno (1). Para obtener la expresión que brinde esta posibilidad se realizó el mapa de Karnaught para la salida B4, con el siguiente resultado:
+Ahora obervamos la distribucion de pines de la raspberry:
 
-![alt text](https://github.com/Proyecto-Digitales/INFORME-N.2/blob/master/Img/Karnauth.PNG)
+![alt text](https://github.com/Proyecto-Digitales/INFORME-N.3/blob/master/Img/Ap2.png)
 
-Por lo tanto, se obtiene para B4 la siguiente expresión:
-
-B4 = A3A2 + A3A1 = A3(A2 + A1)
-
-El resultado de esta implementación se llevará a las entradas B3 y B2 del sumador con el fin de obtener el resultado deseado.
-
-Nota: Es necesario recordar que en la anterior descripción no tiene significado el hecho de no tener una secuencia consecutiva de valores. Así mismo en los valores de las entradas A serán ubicados los valores de salida de cada FF.
-
-“Decodificación” y presentación del resultado.
-Cada una de las salidas del sumador deben ser las entradas del decodificador/manejador que en este caso es el circuito 4511. A su vez este circuito arroja las salidas a, b, c, d, e, f  y g  a nivel alto que representan los siete (7) segmentos de un Display y específicamente uno de cátodo común. El Display utilizado es de la serie 5161 que tiene la siguiente distribución:
-
-![alt text](https://github.com/Proyecto-Digitales/INFORME-N.2/blob/master/Img/display.PNG)
-
-Simulación.
-Para llevar a cabo la simulación de la implementación del circuito se utilizó la herramienta proteus. Como se muestra a continuación:
-
-![alt text](https://github.com/Proyecto-Digitales/INFORME-N.2/blob/master/Img/Aporte1.png)
+Para nuestro circuito queremos encender los cuatro leds asi que nuestro diseño quedo asi:
 
 
-Para la demostración también se implemento en la plataforma Tinkercad como se muestra a continuación:
+![alt text](https://github.com/Proyecto-Digitales/INFORME-N.3/blob/master/Img/Ap3.png)
 
 
-![alt text](https://github.com/Proyecto-Digitales/INFORME-N.2/blob/master/Img/aporte2.png)
+Pero el circuito lo concetaremos en el proto asi que tenemos el siguiente esquem:
 
 
+![alt text](https://github.com/Proyecto-Digitales/INFORME-N.3/blob/master/Img/Ap4.png)
 
+Ahora procedemos a programar en python desde la raspberry para poder controlar el encendido de los leds.
+La raspberry cuenta con el sistema operativo Raspbian el cual viene incluido python 3.
+Expliacaion del cogido:
+
+
+![alt text](https://github.com/Proyecto-Digitales/INFORME-N.3/blob/master/Img/Ap5.PNG)
+
+![alt text](https://github.com/Proyecto-Digitales/INFORME-N.3/blob/master/Img/Ap6.PNG)
+
+Ahora armamos nuestro circuito y conectamos a nuestra raspberry.
+
+![alt text](https://github.com/Proyecto-Digitales/INFORME-N.3/blob/master/Img/Ap7.jpg)
+
+Abrimos el terminal de raspbian y ejecutamos nuestro programa:
+
+![alt text](https://github.com/Proyecto-Digitales/INFORME-N.3/blob/master/Img/Ap8.jpg)
+
+Y observamos como comienzan a encenderse los leds:
+
+![alt text](https://github.com/Proyecto-Digitales/INFORME-N.3/blob/master/Img/Ap9.jpg)
 
 
 11.CONCLUSIONES
 
-•	Para la implementación en primera instancia se realizó el análisis de la secuencia de números asignada y se obtuvieron las expresiones necesarias para llevar a cabo la implementación del contador en código binario. Luego se implementó un circuito que ya era conocido como lo es el conversor de código binario a BCD y por último se realizó una actividad conocida como es la decodificación y posterior visualización en Displays de siete segmentos.
-
-•	Teniendo en cuenta la investigación que se realizó y los resultados obtenidos teóricamente y en prácticamente podemos decir que una de la característica principal de los flip flop asíncronos, es que no comparten toda la misma entrada de reloj, algo muy importante ya que no cambian todos de estado al mismo tiempo. 
+•	Entender cómo se distribuyen los diferentes pines o puertos tanto de salida y para qué sirve cada uno resulta muy sencillo. Existen diversos artículos en el internet que lo explican detalladamente y de una manera interactiva, lo cual facilita el proceso de entendimiento para principiantes. 
 
 
-•	En la realización de la simulación se pudo ratificar que los tiempos de retardo en la propagación de datos entre un FF y otro que se presentaban en la implementación asíncrona se vieron disminuidos y que éstos no se presentaban en secuencias de 30ns por cada FF sino que el retraso de 30ns ocurre una vez en cada cambio de estado.
+•	El simulador BrainBox trabaja con dispositivos programados para poder simular circuitos digitales, en el apartado de la raspberry no cuenta con gran variedad en el caso de periféricos, pero los que se encuentran ya en uso trabajan mediante bloques, lo cual resulta interactivo y facilita el aprendizaje a principiantes.
 
-•El circuito se lo verificó mediante la implementación en el simulador proteus y el lab virtual Tinkercad, lo que nos indicó que la combinación de integrados de tegnología Cmos con TTL no trabajan como se esperaria que trabajen. 
+
+•	Para nuestra aportación en físico observamos que las técnicas de programación en Python pueden ser muy simples o muy sofisticadas (por ejemplo, con la programación orientada a objetos). En este proyecto se trató de reducir la complejidad para ser lo más didácticos posibles. Python, Raspberry y Linux son argumentos muy extensos sobre los cuales pueden encontrar toneladas de artículos en Internet y también tantos libros.
 
 
 
 12.RECOMENDACIONES
 
-•	Es importante conocer cuál es la lógica de funcionamiento de los flip flops tipo D para futuros diseños. 
-
-•	Se recomienda no mezclar integrados de tecnología TTL con tecnología Cmos ya que sus diseños admiten diferentes valores de voltajes y corriente, en este diseño de lo realizo debido a la escasez de modelos de integrados en la plataforma de Tinkercad. 
-
-•	Se recomienda tener conocimientos previos sobre contadores y sus tablas de verdad para futuros diseños. 
-
+•	Es importante conocer la estructura de hardware de la raspberry pi, para evitar daños en la realización de proyectos.  
+•	Se recomienda tener conocimientos en programación de lenguaje Python para poder empezar a trabajar en la raspberry. 
+•	Es recomendable al instalar un sistema operativo en la raspberry, contar con un teclado y mouse con conexión usb o inalámbricos. 
 •	Es preciso planificar un cronograma con diagramas de Grant en las diferentes aplicaciones que existen y para el desarrollo se recomienda el software Project. 
 
 
@@ -232,56 +245,29 @@ Siliceo, R. (2018). Algoritmo de las operaciones aritmeticas aplicadas a los cod
 
 15.1 MANUAL DE USUARIO
 
-Para poder usar el contador sincrónico se debe tener instalado si es posible la versión más actual de proteus.
-Abriremos el archivo de la simulación
+Una vez abierta la simulación, la podemos simular y observar los diferentes filtros que nos ofrece el simulador, los cuales podemos programar en la raspberry y utilizar las diferentes librerías que nos ayudan a usar dichos filtros. 
 
-![alt text](https://github.com/Proyecto-Digitales/INFORME-N.2/blob/master/Img/manual1.png)
+Para poder variar los datos y utilizar otra cámar IP nos dirigimos a la siguiente página:
 
-Nos presenta la interfaz de usuario del simulador:
+http://insecam.org/en/bycountry/EC/
 
-![alt text](https://github.com/Proyecto-Digitales/INFORME-N.2/blob/master/Img/manual2.png)
+![alt text](https://github.com/Proyecto-Digitales/INFORME-N.3/blob/master/Img/Manual3.png)
 
-Procedemo a realizar la simulación hacuendo click en el botón de la parte inferior izquierda.
+En esta pagina podremos escoger otra dirección IP de cualquier cámara publica, siempre y cuando se transmita en formato mpjeg.
 
-![alt text](https://github.com/Proyecto-Digitales/INFORME-N.2/blob/master/Img/manual3.png)
+![alt text](https://github.com/Proyecto-Digitales/INFORME-N.3/blob/master/Img/Manual4.png)
 
+Debemos presionar en configuración y podremos pegar el link con una nueva dirección IP.
 
-Nota: tomar en cuenta que no se debe cambiar la frecuencia de la entrada de reloj. Ni cambiar el voltaje de entrada Vcc ya que podemos quemar los integrados.
-
-Si queremos usar la implementación en tinkercad procederemos a entrar al siguiente link:
-
-https://www.tinkercad.com/things/jxkNseHqJ4V-contador-asincronico/editel?sharecode=qnTRplA-JvCfeY6Auv5toNln4Gi4wd6hVyGVvV7Ki40
-
-![alt text](https://github.com/Proyecto-Digitales/INFORME-N.2/blob/master/Img/manual4.png)
-
-
-Nos presenta la interfaz de usuario
-
-Ahora procedemos a simular para observar nuestro circuito:
-
-![alt text](https://github.com/Proyecto-Digitales/INFORME-N.2/blob/master/Img/manual5.PNG)
-
-Nota: tomar en cuenta que es debido registrarse antes en la plataforma Tinkercad para poder tener acceso, no se debe cambiar la frecuencia de la entrada de reloj. Ni cambiar el voltaje de entrada Vcc ya que podemos quemar los integrados. Evitar mover las conexiones ya que dañaría el diseño.
+![alt text](https://github.com/Proyecto-Digitales/INFORME-N.3/blob/master/Img/Manual5.png)
 
 
 15.2 HOJAS TÉCNICAS
 
-Datasheet 74HC293
+Guía del simulador Brainbox
 
-https://github.com/Proyecto-Digitales/INFORME-N.2/blob/master/Hojas%20tecnicas/Datasheet74283.pdf
+https://github.com/freegroup/brainbox
 
-Datasheet 74HC32
+Raspberry model B
 
-https://github.com/Proyecto-Digitales/INFORME-N.2/blob/master/Hojas%20tecnicas/Datasheet7432.pdf
-
-Datasheet 74HC74
-
-https://github.com/Proyecto-Digitales/INFORME-N.2/blob/master/Hojas%20tecnicas/Datasheet7474.pdf
-
-Datasheet 74HC08
-
-https://github.com/Proyecto-Digitales/INFORME-N.2/blob/master/Hojas%20tecnicas/datasheet7408.pdf
-
-Datasheet 4511
-
-https://github.com/Proyecto-Digitales/INFORME-N.2/blob/master/Hojas%20tecnicas/Datasheetcd4511b.pdf
+![alt text](https://github.com/Proyecto-Digitales/INFORME-N.3/blob/master/Hojas%20tecnicas/Hoja_tecnica_raspberry.pdf)
