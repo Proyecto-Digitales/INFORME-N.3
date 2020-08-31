@@ -42,7 +42,9 @@ Banerjee, Sethia, Mittal, Arora y Chauhan (2013) hablan de un sensor de movimien
 
 •Diagramas de bloques.
 
-![alt text](https://github.com/Proyecto-Digitales/INFORME-N.2/blob/master/Img/diagrama1.jpg)
+![alt text](https://github.com/Proyecto-Digitales/INFORME-N.3/blob/master/Img/Bloque1.jpeg)
+
+![alt text](https://github.com/Proyecto-Digitales/INFORME-N.3/blob/master/Img/Bloque2.jpeg)
 
 •Diagramas UML. (casos de uso-clase)
 
@@ -76,7 +78,8 @@ Banerjee, Sethia, Mittal, Arora y Chauhan (2013) hablan de un sensor de movimien
 
 7.MAPA DE VARIABLES
 
-Este punto hace referencia a las variables que se emplean dentro de un programa, las cuales deben ser indicadas en la captura de una pantalla si son componentes visuales o especificados en una taba sin no son visibles en una interface. Se debe hacer referencia al tipo y la función que desempeñan en la aplicación.
+![alt text](https://github.com/Proyecto-Digitales/INFORME-N.3/blob/master/Img/Mapa.jpeg)
+
 
 
 8.EXPLICACIÓN DEL DISEÑO
