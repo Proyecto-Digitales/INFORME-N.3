@@ -1,4 +1,4 @@
-                                 CONTADOR ASINCRONICO MEDIANTE LA IMPLEMENTACION DE FIP FLOPS TIPO D
+                                    ENTRADA Y SALIDA DE DATOS EN BRAINBOX PARA UNA RASPBERRY PI
 
 
 1.PLANTEAMIENTO DEL PROBLEMA
@@ -12,7 +12,7 @@ diseñar un circuito el cual nos permita observar en dos displays de 7 segmentos
 
 Objetivo general
 
--Implementar y comprobar el funcionamiento de un circuito contador ascendente asíncrono, implementado con flip-flop tipo D.
+-Implementar  un programa que permita visualizar las entradas y salidas de los datos 
 
 Objetivo específicos
 
