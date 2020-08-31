@@ -35,7 +35,7 @@ Banerjee, Sethia, Mittal, Arora y Chauhan (2013) hablan de un sensor de movimien
 4.MARCO TEÓRICO
 
 
-![alt text](https://github.com/Proyecto-Digitales/INFORME-N.2/blob/master/Img/marco%20teorico%201.png)
+![alt text](https://github.com/Proyecto-Digitales/INFORME-N.3/blob/master/Img/marcoteorico1.png)
 
 ![alt text](https://github.com/Proyecto-Digitales/INFORME-N.2/blob/master/Img/marco%20teorico%203.png)
 
