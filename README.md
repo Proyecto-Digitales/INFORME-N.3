@@ -51,12 +51,6 @@ Banerjee, Sethia, Mittal, Arora y Chauhan (2013) hablan de un sensor de movimien
 https://github.com/Proyecto-Digitales/INFORME-N.3/blob/master/Img/4_A.PNG
 
 
-•Diagramas esquemáticos.
-
-![alt text](https://github.com/Proyecto-Digitales/INFORME-N.2/blob/master/Img/diagrama5.jpg)
-
-
-
 6.LISTA DE COMPONENTES
 
 -Simulador BrainBox
