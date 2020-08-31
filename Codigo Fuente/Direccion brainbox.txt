@@ -1,1 +1,4 @@
 http://www.brainbox-demo.de/circuit/?shared=o8oHL7Ct8.brain
+En caso de no abrirse la simulacion ir a http://www.brainbox-demo e ingresar:
+Usuario: Digitales
+Clave: h5xCbP9V4
