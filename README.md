@@ -14,11 +14,9 @@ Objetivo general
 
 Objetivo específicos
 
--Investigar en funcionamiento de flip flops tipo D.
+-Investigar en funcionamiento de l simulador brainbox como de us componentes y uso
 
--Comprobar el funcionamiento del diseño del contador mediante la simulación en proteus e implementada en Tinkercad (laboratorio virtual).
-
--Convertir las salidas de cada flip flop de código BCD a decimal y mostrarlo en dos displays de 7 segmentos.
+-Comprobar el funcionamiento del diseño de entrada de datos  a travesdel laboratorio virtual Brainbox.
 
 
 3.ESTADO DEL ARTE
@@ -60,9 +58,7 @@ Banerjee, Sethia, Mittal, Arora y Chauhan (2013) hablan de un sensor de movimien
 
 6.LISTA DE COMPONENTES
 
--Simulador Proteus version 8.9.
-
--Laboratorio virtual Tinkercad.
+-Laboratorio virtual Brainbox
 
 
 7.MAPA DE VARIABLES
