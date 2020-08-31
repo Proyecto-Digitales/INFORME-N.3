@@ -62,10 +62,15 @@ Banerjee, Sethia, Mittal, Arora y Chauhan (2013) hablan de un sensor de movimien
 6.LISTA DE COMPONENTES
 
 -Simulador BrainBox
+
 -Proto
+
 -Resistencias
+
 -Cables
+
 -Pulsadores
+
 -Raspbery pi modelo B
 
 
