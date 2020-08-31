@@ -46,13 +46,9 @@ Banerjee, Sethia, Mittal, Arora y Chauhan (2013) hablan de un sensor de movimien
 
 ![alt text](https://github.com/Proyecto-Digitales/INFORME-N.3/blob/master/Img/Bloque2.jpeg)
 
-•Diagramas UML. (casos de uso-clase)
-
-![alt text](https://github.com/Proyecto-Digitales/INFORME-N.2/blob/master/Img/diagrama2.jpg)
-
 •Diagramas eléctricos.
 
-![alt text](https://github.com/Proyecto-Digitales/INFORME-N.2/blob/master/Img/diagrama3.jpg)
+https://github.com/Proyecto-Digitales/INFORME-N.3/blob/master/Img/4_A.PNG?raw=true
 
 
 •Diagramas esquemáticos.
