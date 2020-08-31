@@ -278,4 +278,4 @@ https://github.com/freegroup/brainbox
 
 Raspberry model B
 
-![alt text](https://github.com/Proyecto-Digitales/INFORME-N.3/blob/master/Hojas%20tecnicas/Hoja_tecnica_raspberry.pdf)
+https://github.com/Proyecto-Digitales/INFORME-N.3/blob/master/Hojas%20tecnicas/Hoja_tecnica_raspberry.pdf
