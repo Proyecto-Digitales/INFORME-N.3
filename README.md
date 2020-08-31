@@ -234,12 +234,17 @@ Y observamos como comienzan a encenderse los leds:
 
 Alulema, D. (2020). Circuitos Digitales. Quito, Ecuador.
 
+
 Floyd, T. (2006). Fundamentos de sistemas digitales. Madrid: Pearson.
 
-Ricoy, A. (14 de Junio de 2020). Appinventor en español. Obtenido de https://sites.google.com/site/contadorasincrono/flipflop
 
-Siliceo, R. (2018). Algoritmo de las operaciones aritmeticas aplicadas a los codigos binarios, octal, hexadecimal y BCD con sus respectivas conversiones. Ciudad de Mexico.
+Otalora, A. (14 de Junio de 2020). Obtenido de https://www.programoergosum.com/cursos-online/raspberry-pi/232-curso-de-introduccion-a-raspberry-pi/que-es-raspberry-pi
 
+
+Hernán, C.(2018). Obtenido de https://raspberrypi.cl/que-es-raspberry/
+
+
+Tomado de BrainBox GitHub: https://github.com/neuroanatomy/BrainBox
 
 
 15.ANEXOS
