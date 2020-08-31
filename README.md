@@ -205,7 +205,7 @@ Para la demostración también se implemento en la plataforma Tinkercad como se 
 
 13.CRONOGRAMA
 
-![alt text](https://github.com/Proyecto-Digitales/INFORME-N.2/blob/master/Img/Cronograma.PNG)
+![alt text](https://github.com/Proyecto-Digitales/INFORME-N.3/blob/master/Img/Cronograma.PNG)
 
 
 14.BIBLIOGRAFÍA
