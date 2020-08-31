@@ -1,0 +1,58 @@
+#!usr/bin/env python         # Necesario para el interprete Python
+"""
+Programa simple que enciende 4 leds conectados
+a una Raspberry PI en modo secuencial.
+Bryan Carrillo
+
+Uso:
+-----
+1. Accionar el pulsador 1 para activar la secuencia
+2. Accionar el pulsador 2 para terminar el programa
+"""
+
+import RPi.GPIO as io        # Import libreria de I/O (entradas / salidas)
+import time                  # Import libreria para los retardos
+
+led1 = 9                     # led 1 conectado al gpio 9 del micro
+led2 = 8                     # led 2 conectado al gpio 8 del micro
+led3 = 7                     # led 3 conectado al gpio 7 del micro
+led4 = 4                     # led 4 conectado al gpio 4 del micro
+
+button1 = 11                 # boton 1 conectado al gpio 11 del micro
+button2 = 10                 # boton 2 conectado al gpio 10 del micro
+
+io.setmode(io.BCM)           # modo in/out pin del micro
+io.setwarnings(False)        # no señala advertencias de pin ya usados
+
+io.setup(led1,io.OUT)        # set pin led 1 como salida
+io.setup(led2,io.OUT)        # set pin led 2 como salida
+io.setup(led3,io.OUT)        # set pin led 3 como salida
+io.setup(led4,io.OUT)        # set pin led 4 como salida
+
+io.setup(button1,io.IN)      # set pin pulsador 1 como entrada
+io.setup(button2,io.IN)      # set pin pulsador 2 como entrada
+
+for a in range(100):         # Ciclo de espera hasta que se acciona
+    time.sleep(0.5)          # el pulsador 1
+    if not io.input(button1):
+        break                # Con el pulsador 1 accionado (a masa)
+                             # termina el ciclo de espera
+
+while io.input(button2):     # Ciclo hasta que se acciona el pulsador 2
+    io.output(led4,0)        # Apaga el led 4
+    io.output(led1,1)        # Enciende el led 1
+    time.sleep(0.1)          # Espera medio segundo
+
+    io.output(led1,0)        # Apaga el led 1
+    io.output(led2,1)        # Enciende el led 2
+    time.sleep(0.1)          # Espera otro medio segundo
+
+    io.output(led2,0)        # Apaga el led 2
+    io.output(led3,1)        # Enciende el led 3
+    time.sleep(0.1)          # Espera otro medio segundo
+
+    io.output(led3,0)        # Apaga el led 3
+    io.output(led4,1)        # Enciende el led 4
+    time.sleep(0.1)          # Espera otro medio segundo
+
+io.output(led4,0)            # Apaga el led 4 antes de terminar el programa
