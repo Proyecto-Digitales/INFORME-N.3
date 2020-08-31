@@ -223,9 +223,12 @@ Y observamos como comienzan a encenderse los leds:
 
 12.RECOMENDACIONES
 
-•	Es importante conocer la estructura de hardware de la raspberry pi, para evitar daños en la realización de proyectos.  
+•	Es importante conocer la estructura de hardware de la raspberry pi, para evitar daños en la realización de proyectos.
+
 •	Se recomienda tener conocimientos en programación de lenguaje Python para poder empezar a trabajar en la raspberry. 
+
 •	Es recomendable al instalar un sistema operativo en la raspberry, contar con un teclado y mouse con conexión usb o inalámbricos. 
+
 •	Es preciso planificar un cronograma con diagramas de Grant en las diferentes aplicaciones que existen y para el desarrollo se recomienda el software Project. 
 
 
