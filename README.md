@@ -39,8 +39,6 @@ Banerjee, Sethia, Mittal, Arora y Chauhan (2013) hablan de un sensor de movimien
 
 ![alt text](https://github.com/Proyecto-Digitales/INFORME-N.3/blob/master/Img/marcoteorico2.png)
 
-![alt text](https://github.com/Proyecto-Digitales/INFORME-N.2/blob/master/Img/marco%20teorico%202.png)
-
 5.DIAGRAMAS
 
 •Diagramas de bloques.
